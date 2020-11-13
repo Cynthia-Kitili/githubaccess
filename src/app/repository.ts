@@ -1,3 +1,3 @@
 export class Repository {
-    name: string;
+    gitRepos: string;
 }
