@@ -1,9 +1,10 @@
 export class User {
-    created_at: string;
-    avatar_url: any;
-    followers_url: number;
-    following_url: number;
-    repos_url: string;
-    login: number;
-    public_repos: string;
+    avatar: any;
+    user: any;
+    followers: any;
+    following: any;
+    public_repo: any;
+    bio: any;
+    location: any;
+    company: any;
 }
