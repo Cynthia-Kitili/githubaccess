@@ -1,6 +1,6 @@
 export class Repository {
-    id: string;
-    name: string;
-    html_url: string;
-    description: string;
+    description: any;
+    name: any;
+    language: any;
+    forks: any;
 }
