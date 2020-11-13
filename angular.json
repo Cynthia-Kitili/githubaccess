@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "GitForm"
+  "defaultProject": "GitForm",
+  "cli": {
+    "analytics": "40d6f79c-015f-450c-b934-4ccd6a2661c8"
+  }
 }
