@@ -25,6 +25,17 @@ export class UserService {
       location: any;
       company: any;
     }
-    
+    return new Promise((resolve, reject) => {
+      this.user = [];
+      this.http.get<data>(this.url + search + this.token).toPromise().then(
+        (results) => {
+          this.user.push(results);
+          resolve();
+        },
+        (error) => {
+          reject();
+        }
+      );
+    }); 
+  }
 }
-} 
