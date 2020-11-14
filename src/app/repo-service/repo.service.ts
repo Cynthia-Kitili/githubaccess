@@ -17,4 +17,4 @@ export class RepoService {
     return this.http.get(this.url + search + '/repos?' + this.token);
   }
 }
-}
+

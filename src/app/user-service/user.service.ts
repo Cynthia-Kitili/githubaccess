@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from '../user';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,4 +13,18 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
   
+  searchUser(search: string){
+    interface data {
+      avatar: string;
+      user: string;
+      following: string;
+      followers: string;
+      forks: string;
+      public_repo: string;
+      bio: any;
+      location: any;
+      company: any;
+    }
+    
 }
+} 
