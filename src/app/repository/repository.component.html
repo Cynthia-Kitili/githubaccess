@@ -1,1 +1,20 @@
-<p>repository works!</p>
+
+<div class="jumbotron">
+    <h2 class="text-center">User Repositories</h2>
+    <br>
+    <app-search (searchEmmiter)="getRepo($event)"></app-search>
+</div>
+<div class="columns ">
+    <div class="card" *ngFor="let Repo of repo">
+        <div class="col-sm-6">
+            <div class="card-header">Project Name: {{Repo.name}}</div>
+            <div class="card-body">
+                <p>Description: {{Repo.description}}</p>
+                <p>Language: {{Repo.language}}</p>
+            </div>
+            <div class="card-footer">
+                <p id="forks">forked: {{Repo.forks}}</p>
+            </div>
+        </div>
+    </div>
+</div>
