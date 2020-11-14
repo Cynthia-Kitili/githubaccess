@@ -1,1 +1,29 @@
-<p>user works!</p>
+<div class="container">
+    <div class="text-inline">
+        <h2 class="text-center"> User Search</h2>
+        <app-search (searchEmmiter)="userSearched($event)"></app-search>
+    </div>
+    <br>
+    <div class="card" *ngFor='let user of user'>
+        <div class="card-header">
+            
+            {{user.name}}
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <img class="card-img-top" src="{{user.avatar_url}}" alt="">
+            </div>
+            <div class="col-sm-6 mb-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Following: {{user.followers}}</li>
+                    <li class="list-group-item">Followers: {{user.following}}</li>
+                    <li class="list-group-item">Repos: {{user.public_repos}}</li>
+                    <li class="list-group-item">Bio: {{user.bio}} </li>
+                    <li  class="list-group-item">Located at: {{user.location}}</li>
+                    <li class="list-group-item">Works at: {{user.company}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
