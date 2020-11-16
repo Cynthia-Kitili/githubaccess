@@ -1,6 +1,7 @@
-<div class="input-group">
-    <input class="form-control" type="text" placeholder="Search" aria-label="Search" name="search"[(ngModel)]="search">
-    <div class="input-group-append">
-        <button class="btn btn-success" type="button" (click)="emmitUser()">Search</button>
-    </div>
-  </div>
+
+<nav class="navbar navbar-light bg-light">
+    <form class="form-inline">
+      <input [(ngModel)]='search' name="search" class="form-control mr-sm-2" type="search" placeholder="Enter Github Username..." aria-label="Search">
+      <button class="btn btn-primary my-2 my-sm-0" type="submit" (click)="searchUser()" >Search</button>
+    </form>
+  </nav>

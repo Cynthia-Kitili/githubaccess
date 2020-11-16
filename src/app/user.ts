@@ -1,10 +1,18 @@
 export class User {
-    avatar: any;
-    user: any;
-    followers: any;
-    following: any;
-    public_repo: any;
-    bio: any;
-    location: any;
-    company: any;
+     constructor(
+        public login:string,
+        public avatar_url:string,
+        public followers: number,
+        public following: number,
+        public bio :string,
+        public location :string,
+        public email:string,
+        public public_repos:string,
+        public public_gists: string,
+        public html_url: string,
+        public company :string,
+        public user:string
+    ){
+
+    }
 }

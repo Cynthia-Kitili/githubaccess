@@ -1,6 +1,9 @@
 export class Repository {
-    description: any;
-    name: any;
-    language: any;
-    forks: any;
+    constructor(
+        public name:string,
+        public description:string,
+        public html_url:any,
+        public language:string
+
+    ){}
 }

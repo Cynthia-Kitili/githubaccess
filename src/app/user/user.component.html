@@ -1,29 +1,71 @@
 <div class="container">
     <div class="text-inline">
         <h2 class="text-center"> User Search</h2>
-        <app-search (searchEmmiter)="userSearched($event)"></app-search>
+        <app-search (searchEmmiter)="getUserInfo($event)"></app-search>
     </div>
     <br>
-    <div class="card" *ngFor='let user of user'>
-        <div class="card-header">
-            
-            {{user.name}}
-        </div>
+    <div class="container">
         <div class="row">
-            <div class="col-sm-6">
-                <img class="card-img-top" src="{{user.avatar_url}}" alt="">
-            </div>
-            <div class="col-sm-6 mb-4">
-                <ul class="list-group">
-                    <li class="list-group-item">Following: {{user.followers}}</li>
-                    <li class="list-group-item">Followers: {{user.following}}</li>
-                    <li class="list-group-item">Repos: {{user.public_repos}}</li>
-                    <li class="list-group-item">Bio: {{user.bio}} </li>
-                    <li  class="list-group-item">Located at: {{user.location}}</li>
-                    <li class="list-group-item">Works at: {{user.company}}</li>
+            <div class="col-6">
+                <div class="main-info">
+                    <div *ngIf="info">
+                        <div class="row">
+                            <div class="col-sm-5"><br>
+                                <img src="{{info.avatar_url}}" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Name: {{info.name}}</h2> ({{info.login}})
+                        <h2> <span *ngIf="info.company">Company: {{info.company}}</span></h2>
+                        <h2>Location: {{info.location}} </h2>
+                    </div>
+            <div class="list">
+                <ul>
+                    <li class="list-group-item list-group-item-success" *ngIf="info.bio">Bio: {{info.bio}}
+                    </li>
+
                 </ul>
             </div>
         </div>
     </div>
+    <div class="col-6 pt-4">
+        <div class="card" appHover>
+            <div class="card-body">
+                <h4>Github Username: {{info.login}}</h4>
+                <hr>
+                <p><i class="fa fa-file" style="font-size:20px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span
+                        class="follow">{{info.public_repos}}</span></p>
+                <hr>
+                <p> <i class="fa fa-user" style="font-size:20px"></i>&nbsp;&nbsp; Following:&nbsp;&nbsp; <span
+                        class="follow">{{info.following}}</span></p>
+                <hr>
+                <p> <i class="fa fa-users" style="font-size:20px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span
+                        class="follow">{{info.followers}}</span></p>
+                <hr>
+                <p> <i class="fa fa-calendar" style="font-size:20px"></i>&nbsp;&nbsp; Date Created:&nbsp;&nbsp;
+                    <span class="follow">{{info.created_at}}</span></p>
+                <hr>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
 
+<hr>
+<div class="container-fluid">
+<h1 class="text-center"><strong><em>Repositories</em></strong></h1>
+<div class="row">
+    <div class="col-sm-6 pt-3" *ngFor="let Repo of Repos">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Repository Name: {{Repo.name}} </h5>
+                <p class="card-text">Description: {{Repo.description}}</p>
+                <h5 class="card-text">Language: {{Repo.language}} </h5>
+                
+                <a href="{{Repo.html_url}}" class="btn btn-primary">View Project On</a>
+            </div>
+        </div>
+    </div>
+</div>
 </div>

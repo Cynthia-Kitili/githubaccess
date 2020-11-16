@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
-import { UserService } from '../user-service/user.service';
+import { RepoService } from '../repo-service/repo.service';
+
 
 
 @Component({
@@ -9,24 +9,25 @@ import { UserService } from '../user-service/user.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  user: User[] = []; 
+  info: any;
+  Repos: any;
+  
+  
+  constructor(private repoService: RepoService) { }
+  getUserInfo(user: string) {
 
-  constructor(private service:UserService) { }
+    this.repoService.getProfileInfo(user).subscribe(info => {
+      
+      this.info = info;
+    });
 
-  userSearched(search: string) {
-    this.service.searchUser(search).then(
-      (success) => {
-        this.user = this.service.user;
-        console.log(this.user);
-      },
-      (error) => {
-        console.log(error)
-      }
-    )
+    this.repoService.getProfileRepos(user).subscribe(Repos => {
+      
+      this.Repos = Repos;
+    });
   }
-
-  ngOnInit() {
-    this.userSearched('Cynthia-Kitili')
+  ngOnInit(): void {
+    this.getUserInfo('Cynthia-Kitili');
   }
 
 }
