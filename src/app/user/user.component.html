@@ -1,49 +1,49 @@
-<div class="container">
+<div class="container-fluid">
     <div class="text-inline">
-        <h2 class="text-center"> User Search</h2>
+        <h2 class="text-center"> Github UserName Search</h2>
         <app-search (searchEmmiter)="getUserInfo($event)"></app-search>
     </div>
     <br>
     <div class="container">
         <div class="row">
             <div class="col-6">
-                <div class="main-info">
-                    <div *ngIf="info">
+                <div >
+                    <div *ngIf="info of info">
                         <div class="row">
-                            <div class="col-sm-5"><br>
+                            <div ><br>
                                 <img src="{{info.avatar_url}}" alt="img">
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h2>Name: {{info.name}}</h2> ({{info.login}})
+                        <p>{{info.name}}</p><br> 
+                        ({{info.login}})
                         <h2> <span *ngIf="info.company">Company: {{info.company}}</span></h2>
-                        <h2>Location: {{info.location}} </h2>
+                        
                     </div>
-            <div class="list">
+            <div >
                 <ul>
-                    <li class="list-group-item list-group-item-success" *ngIf="info.bio">Bio: {{info.bio}}
-                    </li>
+                    <li  *ngIf="info.bio">Bio: {{info.bio}} </li>
 
                 </ul>
             </div>
         </div>
     </div>
-    <div class="col-6 pt-4">
-        <div class="card" appHover>
+    <div class="col-6">
+        <div class="card" >
             <div class="card-body">
-                <h4>Github Username: {{info.login}}</h4>
+                <h4>Username: {{info.login}}</h4>
                 <hr>
-                <p><i class="fa fa-file" style="font-size:20px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span
+                <p><i class="fa fa-file" style="font-size:35px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span
                         class="follow">{{info.public_repos}}</span></p>
                 <hr>
-                <p> <i class="fa fa-user" style="font-size:20px"></i>&nbsp;&nbsp; Following:&nbsp;&nbsp; <span
+                <p> <i class="fa fa-user" style="font-size:35px"></i>&nbsp;&nbsp; Following:&nbsp;&nbsp; <span
                         class="follow">{{info.following}}</span></p>
                 <hr>
-                <p> <i class="fa fa-users" style="font-size:20px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span
+                <p> <i class="fa fa-users" style="font-size:35px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span
                         class="follow">{{info.followers}}</span></p>
                 <hr>
-                <p> <i class="fa fa-calendar" style="font-size:20px"></i>&nbsp;&nbsp; Date Created:&nbsp;&nbsp;
+                <p> <i class="fa fa-calendar" style="font-size:35px"></i>&nbsp;&nbsp; Date Created:&nbsp;&nbsp;
                     <span class="follow">{{info.created_at}}</span></p>
                 <hr>
                 <hr>
@@ -53,7 +53,7 @@
 </div>
 
 <hr>
-<div class="container-fluid">
+<div class="container-fluid1">
 <h1 class="text-center"><strong><em>Repositories</em></strong></h1>
 <div class="row">
     <div class="col-sm-6 pt-3" *ngFor="let Repo of Repos">
@@ -63,7 +63,7 @@
                 <p class="card-text">Description: {{Repo.description}}</p>
                 <h5 class="card-text">Language: {{Repo.language}} </h5>
                 
-                <a href="{{Repo.html_url}}" class="btn btn-primary">View Project On</a>
+                <a href="{{Repo.html_url}}" class="btn btn-primary">View Project On Github</a>
             </div>
         </div>
     </div>
