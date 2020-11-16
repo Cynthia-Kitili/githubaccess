@@ -9,14 +9,16 @@ import { SearchComponent } from './search/search.component';
 import { UserComponent } from './user/user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {FormsModule} from '@angular/forms';
-import { DatePipe } from './date.pipe'
+import { DatePipe } from './date.pipe';
+import { HighlightDirective } from './highlight.directive'
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     UserComponent,
     NavbarComponent,
-    DatePipe
+    DatePipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
