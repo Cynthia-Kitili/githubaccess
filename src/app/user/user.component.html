@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="col-6">
+    <div class="col-sm-6 pt 3">
         <div class="card" >
             <div class="card-body">
                 <h4>Username: {{info.login}}</h4>
@@ -54,14 +54,15 @@
 
 <hr>
 <div class="container-fluid1">
-<h1 class="text-center"><strong><em>Repositories</em></strong></h1>
+<h1 class="text-center">Repositories</h1>
 <div class="row">
-    <div class="col-sm-6 pt-3" *ngFor="let Repo of Repos">
+    <div class="col-sm-6 pt-4 " *ngFor="let Repo of Repos">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">Repository Name: {{Repo.name}} </h5>
+                <h4 class="card-title">Repository Name: {{Repo.name}} </h4>
+               
+                <h4 class="card-text">Language: {{Repo.language}} </h4>
                 <p class="card-text">Description: {{Repo.description}}</p>
-                <h5 class="card-text">Language: {{Repo.language}} </h5>
                 
                 <a href="{{Repo.html_url}}" class="btn btn-primary">View Project On Github</a>
             </div>
