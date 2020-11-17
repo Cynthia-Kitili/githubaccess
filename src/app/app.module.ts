@@ -10,7 +10,8 @@ import { UserComponent } from './user/user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {FormsModule} from '@angular/forms';
 import { DatePipe } from './date.pipe';
-import { HighlightDirective } from './highlight.directive'
+import { HighlightDirective } from './highlight.directive';
+import { RepoComponent } from './repo/repo.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { HighlightDirective } from './highlight.directive'
     UserComponent,
     NavbarComponent,
     DatePipe,
-    HighlightDirective
+    HighlightDirective,
+    RepoComponent
   ],
   imports: [
     BrowserModule,

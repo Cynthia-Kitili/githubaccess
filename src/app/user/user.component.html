@@ -34,16 +34,16 @@
             <div class="card-body">
                 <h4>Username: {{info.login}}</h4>
                 <hr>
-                <p><i class="fa fa-file" appHighlight style="font-size:35px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span
+                <p><i class="fa fa-file"  style="font-size:35px"></i>&nbsp;&nbsp; Repositories:&nbsp;&nbsp; <span
                         class="follow">{{info.public_repos}}</span></p>
                 <hr>
-                <p> <i class="fa fa-user"appHighlight style="font-size:35px"></i>&nbsp;&nbsp; Following:&nbsp;&nbsp; <span
+                <p> <i class="fa fa-user" style="font-size:35px"></i>&nbsp;&nbsp; Following:&nbsp;&nbsp; <span
                         class="follow">{{info.following}}</span></p>
                 <hr>
-                <p> <i class="fa fa-users" appHighlight style="font-size:35px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span
+                <p> <i class="fa fa-users"  style="font-size:35px"></i>&nbsp;&nbsp; Followers:&nbsp;&nbsp; <span
                         class="follow">{{info.followers}}</span></p>
                 <hr>
-                <p > <i class="fa fa-calendar" appHighlight style="font-size:35px"></i>&nbsp;&nbsp; Date Created:&nbsp;&nbsp;
+                <p > <i class="fa fa-calendar"  style="font-size:35px"></i>&nbsp;&nbsp; Date Created:&nbsp;&nbsp;
                     <span class="follow">{{info.created_at}}</span></p>
                 <hr>
                 <hr>
@@ -53,20 +53,3 @@
 </div>
 
 <hr>
-<div class="container-fluid1">
-<h1 class="text-center">Repositories</h1>
-<div class="row">
-    <div class="col-sm-6 pt-4 " *ngFor="let Repo of Repos">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title" appHighlight>Repository Name: {{Repo.name}} </h4>
-               
-                <h4 class="card-text" appHighlight>Language: {{Repo.language}} </h4>
-                <p class="card-text" appHighlight>Description: {{Repo.description}}</p>
-                
-                <a href="{{Repo.html_url}}" class="btn btn-primary">View Project On Github</a>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
