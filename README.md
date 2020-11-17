@@ -1,4 +1,4 @@
-# TEEN-PREGNANCY-CRISIS
+# GITHUBACCESS
 The aim of this project is to use apiKeys to enable GitHub users to access their projects without necessarily going to the main GitHub page.
 * [About The Project](#project-info)
     * [Built With](#built-info)

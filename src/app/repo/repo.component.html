@@ -1,5 +1,5 @@
 <div class="text-inline">
-    <h2 class="text-center"> Github UserName Search</h2>
+    <h2 class="text-center"> Github Repositories Page:</h2>
     <app-search (searchEmmiter)="getUserInfo($event)"></app-search>
 </div>
 <div class="container-fluid1">
@@ -12,7 +12,7 @@
                 <h4 class="card-text" appHighlight>Language: {{Repo.language}} </h4>
                 <p class="card-text" appHighlight>Description: {{Repo.description}}</p>
                 
-                <a href="{{Repo.html_url}}" class="btn btn-primary">View Project On Github</a>
+                <a href="{{Repo.html_url}}" class="btn btn-dark">View Project On Github</a>
             </div>
         </div>
     </div>
