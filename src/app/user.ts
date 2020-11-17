@@ -10,7 +10,8 @@ export class User {
         public public_gists: string,
         public html_url: string,
         public company :string,
-        public user:string
+        public user:string,
+        public created_at: string
     ){
 
     }

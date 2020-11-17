@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     <div>
-                        <p>{{info.name}}</p><br> 
+                        <p>Name: {{info.name}}</p><br> 
                         ({{info.login}})
                         <h2> <span *ngIf="info.company">Company: {{info.company}}</span></h2>
                         
@@ -44,7 +44,7 @@
                         class="follow">{{info.followers}}</span></p>
                 <hr>
                 <p > <i class="fa fa-calendar"  style="font-size:35px"></i>&nbsp;&nbsp; Date Created:&nbsp;&nbsp;
-                    <span class="follow">{{info.created_at}}</span></p>
+                    <span class="follow">{{info.created_at | date}}</span></p>
                 <hr>
                 <hr>
             </div>

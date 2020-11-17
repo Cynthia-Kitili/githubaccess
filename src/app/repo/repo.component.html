@@ -11,7 +11,7 @@
                 <h4 class="card-title" appHighlight>Repository Name: {{Repo.name}} </h4>
                 <h4 class="card-text" appHighlight>Language: {{Repo.language}} </h4>
                 <p class="card-text" appHighlight>Description: {{Repo.description}}</p>
-                
+                <p class="card-text">Date Created: {{Repo.created_at|date}}</p>
                 <a href="{{Repo.html_url}}" class="btn btn-dark">View Project On Github</a>
             </div>
         </div>

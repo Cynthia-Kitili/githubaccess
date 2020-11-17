@@ -9,18 +9,18 @@ import { SearchComponent } from './search/search.component';
 import { UserComponent } from './user/user.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {FormsModule} from '@angular/forms';
-import { DatePipe } from './date.pipe';
 import { HighlightDirective } from './highlight.directive';
-import { RepoComponent } from './repo/repo.component'
+import { RepoComponent } from './repo/repo.component';
+import { DateCountPipe } from './date-count.pipe'
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     UserComponent,
     NavbarComponent,
-    DatePipe,
     HighlightDirective,
-    RepoComponent
+    RepoComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

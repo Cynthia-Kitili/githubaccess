@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'date'
+  name: 'dateCount'
 })
-export class DatePipe implements PipeTransform {
+export class DateCountPipe implements PipeTransform {
 
   transform(value: any): number {
     let today:Date = new Date(); //get current date and time
@@ -18,5 +18,7 @@ export class DatePipe implements PipeTransform {
     }else{
       return 0;
     }
+
   }
+
 }
